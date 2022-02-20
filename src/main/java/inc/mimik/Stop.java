@@ -2,21 +2,24 @@ package inc.mimik;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 
-import java.util.Date;
+import java.util.Calendar;
+
 
 @AllArgsConstructor
 public class Stop {
-  // private final Date start;
-  // private final Date finish;
-  private final String reason;
+    @Getter
+    private final Calendar start;
 
-  @Getter
-  @Setter
-  private final Dockable vessel;
+    @Getter
+    private final Calendar finish;
 
-  @Getter
-  @Setter
-  private final Dock dock;
+    @Getter
+    private final String reason;
+
+    @Getter
+    private final Dockable vessel;
+
+    @Getter
+    private final Dock dock;
 }

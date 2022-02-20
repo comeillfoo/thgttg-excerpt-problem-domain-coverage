@@ -1,5 +1,6 @@
 package inc.mimik;
 
 public interface Dockable {
-    Stop stop(String reason);
+    void stop(String reason, int days);
+    Boolean leave();
 }

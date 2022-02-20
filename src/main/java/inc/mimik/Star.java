@@ -14,11 +14,4 @@ public class Star {
   @Getter
   private final List<Dock> docks;
 
-//  public final double DECLINATION;
-//  public final double RIGHT_ASCENSION;
-//  public final double WEIGHT;
-//  public final double RADIUS;
-//  public final double TEMPERATURE;
-//  public final double LUMINOSITY;
-
 }
