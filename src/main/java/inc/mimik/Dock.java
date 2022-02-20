@@ -1,8 +1,26 @@
 package inc.mimik;
 
-import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-@AllArgsConstructor
+
 public class Dock {
-  private final Port port;
+  //private final Port port;
+
+  @Getter
+  @Setter
+  private  Star star;
+
+  @Getter
+  private final String name;
+
+  @Getter
+  @Setter
+  private Boolean isFree = Boolean.TRUE;
+
+  public Dock(String name) {
+    this.name = name;
+  }
+
+
 }
