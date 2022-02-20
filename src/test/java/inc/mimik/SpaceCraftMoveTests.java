@@ -15,7 +15,7 @@ public class SpaceCraftMoveTests {
     @BeforeAll
     public static void isSuccessfulInit() {
 
-        Star before = new Star("Initial star", new ArrayList<>() {{
+        Star before = new Star("Initial star", new ArrayList<Dock>() {{
             add(new Dock("First"));
         }});
         for (Dock e : before.getDocks()) {
@@ -31,7 +31,7 @@ public class SpaceCraftMoveTests {
     @DisplayName("Move to star")
     public void isSuccessfulMoveToStar() {
 
-        Star after = new Star("Final star", new ArrayList<>() {{
+        Star after = new Star("Final star", new ArrayList<Dock>() {{
             add(new Dock("First"));
         }});
         vessel.jumpTo(after);
@@ -45,7 +45,7 @@ public class SpaceCraftMoveTests {
     @DisplayName("Move to free dock")
     public void isSuccessfulMoveToDoc() {
         Dock freeDock = new Dock("Free dock");
-        Star after = new Star("Final star", new ArrayList<>() {{
+        Star after = new Star("Final star", new ArrayList<Dock>() {{
             add(freeDock);
         }});
         vessel.jumpTo(after);
@@ -63,7 +63,7 @@ public class SpaceCraftMoveTests {
     public void isNotSuccessfulMoveToDoc() {
         Dock notFreeDock = new Dock("Not free");
         notFreeDock.setIsFree(Boolean.FALSE);
-        Star after = new Star("Final star", new ArrayList<>() {{
+        Star after = new Star("Final star", new ArrayList<Dock>() {{
             add(notFreeDock);
         }});
         vessel.jumpTo(after);
